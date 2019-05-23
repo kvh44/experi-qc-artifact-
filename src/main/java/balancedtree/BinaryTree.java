@@ -1,5 +1,8 @@
 package balancedtree;
 
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
+
 // https://www.geeksforgeeks.org/sorted-array-to-balanced-bst/
 
 class BinaryTree { 
@@ -29,6 +32,12 @@ class BinaryTree {
           
         return node; 
     } 
+    
+    @Override
+	public String toString()
+	{
+		return ToStringBuilder.reflectionToString(this, ToStringStyle.MULTI_LINE_STYLE);
+	}
   
     /* A utility function to print preorder traversal of BST */
     void preOrder(Node node) { 
